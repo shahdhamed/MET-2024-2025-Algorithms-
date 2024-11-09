@@ -1,0 +1,15 @@
+def selection_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        min_index = i
+        print(f"\nStep {i + 1}:")
+        print(f"Finding the minimum value in the unsorted part: {arr[i:]}")
+        for j in range(i + 1, n):
+            if arr[j] < arr[min_index]:
+                min_index = j
+            print(f"Comparing arr[{j}] = {arr[j]} with arr[{min_index}] = {arr[min_index]}")
+        arr[i], arr[min_index] = arr[min_index], arr[i]
+        print(f"Swapping arr[{i}] = {arr[i]} with arr[{min_index}] = {arr[min_index]}")
+        print(f"Array after swapping: {arr}")
+
+arr = [64, 25, 12, 22, 11]
